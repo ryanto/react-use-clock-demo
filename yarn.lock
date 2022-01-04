@@ -1166,6 +1166,11 @@ inline-style-prefixer@^6.0.0:
   dependencies:
     css-in-js-utils "^2.0.0"
 
+interval-hooks@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/interval-hooks/-/interval-hooks-0.2.0.tgz#b63834de1ac89c46ee8e276a5fa545f6e2076bb5"
+  integrity sha512-C69KSbs2QeMGlcfhjTHDXlVKu47bKQ3gbhLhB8f53ubOgnVtdeK3nBTwa+XW4M7JGuvKsigJ9PGWdd4KXcg02w==
+
 is-arguments@^1.0.4:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/is-arguments/-/is-arguments-1.1.0.tgz#62353031dfbee07ceb34656a6bde59efecae8dd9"
