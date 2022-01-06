@@ -1,17 +1,35 @@
+import { formatDistanceStrict } from "date-fns";
+import { useInterval, useSynchronizedInterval } from "interval-hooks";
 import { useState } from "react";
+
+let useClock = () => {
+  let [now, setNow] = useState(new Date());
+
+  useSynchronizedInterval(() => {
+    setNow(new Date());
+  }, 1000);
+
+  return now;
+};
 
 export default function Home() {
   let [lastClicked, setLastClicked] = useState();
 
+  let now = useClock();
+
   let handleClick = () => {
-    setLastClicked(new Date());
+    setLastClicked(now);
   };
 
   return (
     <div className="mb-32 text-center">
       <div className="text-xl font-medium">
         <span className="text-gray-500">Last clicked: </span>
-        {lastClicked && lastClicked.toString()}
+        {lastClicked &&
+          formatDistanceStrict(lastClicked, now, {
+            unit: "second",
+            addSuffix: true,
+          })}
       </div>
       <button
         type="button"
