@@ -1,6 +1,4 @@
-import { formatDistance } from "date-fns";
-import { useState, useEffect } from "react";
-import { useInterval } from "interval-hooks";
+import { useState } from "react";
 
 export default function Home() {
   let [lastClicked, setLastClicked] = useState();
